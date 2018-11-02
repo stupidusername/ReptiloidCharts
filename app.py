@@ -3,7 +3,6 @@ from flask import Flask
 from flask_admin import Admin
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
-from views.entityview import EntityView
 
 # Create and configure app.
 app = Flask(__name__)
@@ -20,6 +19,7 @@ db = SQLAlchemy(app)
 from models.entity import Entity
 
 # Import views.
+from views.entityview import EntityView
 from views.homeview import HomeView
 
 # Initialize the admin interface.
