@@ -1,5 +1,5 @@
 """
-Create entitiy table.
+Create entity table.
 
 Revision ID: 8f45d2d021c6
 Revises:
@@ -18,7 +18,7 @@ depends_on = None
 
 def upgrade():
     op.create_table(
-        'entitiy',
+        'entity',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('screen_name', sa.String(), nullable=False),
         sa.Column('name', sa.String()),
@@ -28,4 +28,4 @@ def upgrade():
 
 
 def downgrade():
-    op.drop_table('entitiy')
+    op.drop_table('entity')
