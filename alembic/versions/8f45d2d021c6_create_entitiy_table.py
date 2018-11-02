@@ -22,6 +22,7 @@ def upgrade():
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('screen_name', sa.String(), nullable=False),
         sa.Column('name', sa.String()),
+        sa.Column('track', sa.Boolean),
         sa.Column('deleted', sa.Boolean),
     )
 
