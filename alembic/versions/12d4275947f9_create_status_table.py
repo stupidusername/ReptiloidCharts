@@ -27,7 +27,7 @@ def upgrade():
             nullable=False
         ),
         sa.Column('user_screen_name', sa.String(), nullable=False),
-        sa.Column('status_id', sa.Integer, nullable=False),
+        sa.Column('status_id', sa.Integer, nullable=False, unique=True),
         sa.Column('create_datetime', sa.DateTime(), nullable=False),
         sa.Column('status', sa.Text(), nullable=False),
         sa.Column('reply_count', sa.Integer, nullable=False),
