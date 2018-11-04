@@ -1,5 +1,13 @@
 from config import Config
+import logging
+from logging.handlers import RotatingFileHandler
 import twitter
+
+# Create a rotating log.
+logger = logging.getLogger()
+logger.setLevel(logging.ERROR)
+handler = RotatingFileHandler('logs/search.log', maxBytes=65536, backupCount=5)
+logger.addHandler(handler)
 
 # Get app config.
 config = Config()
