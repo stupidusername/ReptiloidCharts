@@ -12,7 +12,7 @@
 
 ## Installation
 
-- Create a `config.ini`. Change the database DSN and the secret key used for cookies. Use `config-example.ini` as reference.
+- Create a `config.ini`. Use `config-example.ini` as reference.
 - Apply DB migrations: `$ alembic upgrade head`.
 
 
@@ -20,4 +20,8 @@
 
 Run the flask application defined in `app.py`. See [Flask deployment options](http://flask.pocoo.org/docs/1.0/deploying/).
 
-Note: Dates and times are displayed in UTC.
+Notes:
+- Dates and times are displayed in UTC.
+- Screen names should be entered without `@`.
+- The app can only read tweets from the Twitter API that are less than 7 days old.
+- The stats of a given tweet can only be tracked for the next 7 days following its creation. After that they will be frozen.

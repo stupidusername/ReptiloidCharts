@@ -22,3 +22,15 @@ class Config(object):
         :returns: Database DSN.
         """
         return self._config['DEFAULT']['sqlalchemy.url']
+
+    def get_twitter_api_key(self) -> str:
+        """
+        :returns: Twitter API key.
+        """
+        return self._config['DEFAULT']['twitter_api_key']
+
+    def get_twitter_api_secret_key(self) -> str:
+        """
+        :returns: Twitter API secret key.
+        """
+        return self._config['DEFAULT']['twitter_api_secret_key']
