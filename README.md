@@ -18,9 +18,12 @@
 
 ## Usage
 
-Run the flask application defined in `app.py`. See [Flask deployment options](http://flask.pocoo.org/docs/1.0/deploying/).
+- Run the flask application defined in `app.py`. See [Flask deployment options](http://flask.pocoo.org/docs/1.0/deploying/).
+- Run `search.py` in the background. This scripts searches the tweets using the Twitter API.
+Only one instance should be executing at a time. In the unlikely case that it fails, you should restart it.
 
-Notes:
+
+## Notes
 - Dates and times are displayed in UTC.
 - Screen names should be entered without `@`.
 - The app can only read tweets from the Twitter API that are less than 7 days old.
