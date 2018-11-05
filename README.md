@@ -27,5 +27,6 @@ Only one instance should be executing at a time. In the unlikely case that it fa
 ## Notes
 - Dates and times are displayed in UTC.
 - Screen names should be entered without `@`.
+- Only entities that have its `Track` option enabled will we tracked.
 - The app can only read tweets from the Twitter API that are less than 7 days old.
 - The stats of a given tweet can only be tracked for the next 7 days following its creation. After that they will be frozen.
