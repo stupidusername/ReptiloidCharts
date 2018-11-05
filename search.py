@@ -1,6 +1,8 @@
 from config import Config
+from createapp import create_app
 import logging
 from logging.handlers import RotatingFileHandler
+from models.entity import Entity
 import time
 import twitter
 
@@ -9,6 +11,10 @@ logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 handler = RotatingFileHandler('logs/search.log', maxBytes=65536, backupCount=5)
 logger.addHandler(handler)
+
+# Create an app context so models can be used.
+app = create_app()
+app.app_context().push()
 
 # Get app config.
 config = Config()
@@ -27,7 +33,7 @@ def _search():
     """
     Search the tweets that mention any of the loaded entities.
     """
-    pass
+    entities = Entity.query.all()
 
 
 # Execute search.
