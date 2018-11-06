@@ -28,7 +28,7 @@ Only one instance should be executing at a time. In the unlikely case that it fa
 
 - Dates and times are displayed in UTC.
 - Screen names should be entered without `@`.
-- Only entities that have its `Track` option enabled will we tracked.
+- Only entities that have their `Track` option enabled will we tracked.
 - The app can only read tweets from the Twitter API that are less than 7 days old.
 - The stats of a given tweet can only be tracked for the next 7 days following its creation. After that they will be frozen.
 
@@ -37,7 +37,7 @@ Only one instance should be executing at a time. In the unlikely case that it fa
 
 - `/api/get-reactions/<from_date>/<to_date>`
 
-  Get a list of the loaded entities with its reactions by day.
+  Get a list of the loaded entities with their reactions by day.
   Keep in mind that the reactions from a given date corresponds to the summatory of the reactions of the tweets that were created that day.
 
   - Params:
@@ -59,10 +59,12 @@ Only one instance should be executing at a time. In the unlikely case that it fa
         "reactions": [
           {
             "date": "2018-11-05",
+            "mention_count": 3,
             "reaction_count": 10
           },
           {
             "date": "2018-11-06",
+            "mention_count": 2,
             "reaction_count": 5
           }
         ]
@@ -77,10 +79,12 @@ Only one instance should be executing at a time. In the unlikely case that it fa
         "reactions": [
           {
             "date": "2018-11-05",
+            "mention_count": 5,
             "reaction_count": 7
           },
           {
             "date": "2018-11-06",
+            "mention_count": 9,
             "reaction_count": 13
           }
         ]
