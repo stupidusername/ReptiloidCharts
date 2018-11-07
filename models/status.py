@@ -15,7 +15,7 @@ class Status(db.Model):
     )
     user_screen_name = \
         db.Column('user_screen_name', db.String(), nullable=False)
-    status_id = db.Column('status_id', db.Integer, nullable=False, unique=True)
+    status_id = db.Column('status_id', db.Integer, nullable=False)
     create_datetime = \
         db.Column('create_datetime', db.DateTime(), nullable=False)
     status = db.Column('status', db.Text(), nullable=False)
