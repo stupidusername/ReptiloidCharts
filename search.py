@@ -8,6 +8,7 @@ from models.entity import Entity
 from models.status import Status
 import pytz
 import re
+from scrapers.twitterstatus import TwitterStatus
 from sqlalchemy import or_
 import time
 import twitter
@@ -169,6 +170,13 @@ def _count_replies():
         statuses = Status.query.\
             filter(Status.entity_id == entity.id).\
             filter(Status.create_datetime >= _get_date_seven_days_ago()).all()
+        # Scrap the reply count.
+        for status in statuses:
+            twitter_status = TwitterStatus(status.status_id)
+            reply_count = twitter_status.get_reply_count()
+            # Save the result.
+            status.reply_count = reply_count
+            db.session.commit()
 
 
 def _search():

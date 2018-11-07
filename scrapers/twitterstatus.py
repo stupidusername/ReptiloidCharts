@@ -2,6 +2,7 @@ from lxml import html
 from lxml.etree import tostring
 import requests
 from requests import Session
+from scrapers.exceptions import TwitterScrapingException
 from scrapers.twitter import Twitter
 from typing import Optional
 
