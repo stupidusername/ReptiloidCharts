@@ -43,7 +43,7 @@ Only one instance should be executing at a time. In the unlikely case that it fa
   - Params:
 
     - `from_date`: Return reactions of tweets that where created after this date (inclusive). Format: `YYYY-MM-DD`.
-    - `to_date`: Return reactions of tweets that where created before this date (inclusive). Format: `YYYY-MM-DD`.
+    - `to_date`: Return reactions of tweets that where created before this date (non-inclusive). Format: `YYYY-MM-DD`.
 
   - Response example:
 
