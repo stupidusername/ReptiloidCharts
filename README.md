@@ -45,6 +45,11 @@ Only one instance should be executing at a time. In the unlikely case that it fa
     - `from_date`: Return reactions of tweets that where created after this date (inclusive). Format: `YYYY-MM-DD`.
     - `to_date`: Return reactions of tweets that where created before this date (non-inclusive). Format: `YYYY-MM-DD`.
 
+  - Notes:
+
+    - The entities that have no reactions between the two given dates will be omitted.
+    - Dates that do not have reactions will be not be listed in the `reactions` field of each `entity` object.
+
   - Response example:
 
     ```
